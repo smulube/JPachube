@@ -65,4 +65,16 @@ public class LocationTest {
       location.setLon("foo");
       assertEquals(0, location.getLon(), 0);
     }
+
+    @Test
+    public void testStringElevation() {
+      location.setElevation("5.2");
+      assertEquals(5.2, location.getElevation(), 0);
+    }
+
+    @Test
+    public void testInvalidElevation() {
+      location.setElevation("foo");
+      assertEquals(0, location.getElevation(), 0);
+    }
 }
